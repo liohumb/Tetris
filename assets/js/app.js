@@ -15,3 +15,10 @@ const tets = [
   [['□', '□', '□', '□'], ['■', '■', '■', '■'], ['□', '□', '□', '□']],
 ];
 
+let tet = tets[Math.floor(Math.random() * tets.length)];
+window.addEventListener('keydown', e => {
+  e.code === 'ArrowDown' && canMove('down') && move('down');
+  e.code === 'ArrowLeft' && !data.over && canMove('left') && move('left');
+  e.code === 'ArrowRight' && !data.over && canMove('right') && move('right');
+  e.code === 'ArrowUp' && !data.over && canMove('rotate') && move();
+});
