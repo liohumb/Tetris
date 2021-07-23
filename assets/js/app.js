@@ -90,6 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.addEventListener('keyup', control)
 
-      
+      function moveDonw() {
+          undraw()
+          currentPosition += width
+          draw()
+          freeze()
+      }
 
 })
